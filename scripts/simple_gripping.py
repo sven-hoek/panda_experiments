@@ -113,8 +113,13 @@ class MoveGroupPythonIntefaceTutorial(object):
         self.grasp_pose.orientation.z = -0.0002354
 
         self.lift_pose = copy.deepcopy(self.grasp_pose)
-        self.lift_pose.position.x = 0.52
-        self.lift_pose.position.z = 0.2
+        self.lift_pose.position.x = 0.736
+        self.lift_pose.position.y = 0.096
+        self.lift_pose.position.z = 0.506
+        self.lift_pose.orientation.x = 0.68262
+        self.lift_pose.orientation.y = -0.25021
+        self.lift_pose.orientation.z = 0.62908
+        self.lift_pose.orientation.w = -0.2751
 
     def add_collision_objects(self):
         box_pose = geometry_msgs.msg.PoseStamped()

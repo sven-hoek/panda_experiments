@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="namespace" default="panda1" />
+  <node name="simple_gripping"  pkg="panda_experiments" type="simple_gripping.py" ns="$(arg namespace)" output="screen" />
+
+</launch>

@@ -3,10 +3,11 @@
   <world name="default">
 
   <physics type="ode">
-      <max_step_size>0.001</max_step_size>
+      <max_step_size>0.0005</max_step_size>
       <real_time_factor>-1.5</real_time_factor>
-      <real_time_update_rate>2000</real_time_update_rate>
+      <real_time_update_rate>500</real_time_update_rate>
   </physics>
+  <gravity>0.0 0 -1.81</gravity>
 
     <include>
       <uri>model://ground_plane</uri>
@@ -137,7 +138,7 @@
 
     <model name="box">
       <pose>0.5 0 0.026 0 0 0</pose>
-      <link name="link">
+      <link name="box_link1">
         <collision name="collision">
           <geometry>
             <box>
@@ -147,8 +148,8 @@
           <surface>
             <friction>
               <ode>
-                <mu>0.3</mu>
-                <mu2>0.3</mu2>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
               </ode>
             </friction>
           </surface>
@@ -162,15 +163,15 @@
         </visual>
         <inertial>
           <pose>0.0 0.0 0.0 0 0 0</pose>
-          <mass>0.3</mass>
+          <mass>0.001</mass>
           <inertia>
-            <ixx>0.05</ixx>
+            <ixx>0.0007</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
-            <iyy>0.05</iyy>
+            <iyy>0.0007</iyy>
             <iyz>0</iyz>
-            <izz>0.05</izz>
-          </inertia>
+            <izz>0.0007</izz>
+        </inertia>
         </inertial>
       </link>
     </model>

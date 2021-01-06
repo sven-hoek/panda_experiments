@@ -23,8 +23,8 @@ def joint_state_callback(data):
     global time_last_sent, command
     current_time = rospy.Time.now()
     if current_time - time_last_sent >= interval:
+        print(data.effort)
         command.data = data.effort
-        print(command)
         effort_command_publisher.publish(command)
         time_last_sent = current_time
 
